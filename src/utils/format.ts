@@ -1,8 +1,8 @@
 import type { TemperatureUnit } from '../types/weather.js';
 
-export function formatTemp(kelvin: number, unit: TemperatureUnit): string {
-  if (unit === 'metric') return `${Math.round(kelvin - 273.15)}°C`;
-  return `${Math.round((kelvin - 273.15) * 9 / 5 + 32)}°F`;
+export function formatTemp(temp: number, unit: TemperatureUnit): string {
+  if (unit === 'metric') return `${Math.round(temp)}°C`;
+  return `${Math.round(temp)}°F`;
 }
 
 export function formatWindSpeed(ms: number, unit: TemperatureUnit): string {
